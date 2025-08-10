@@ -1,0 +1,8 @@
+.stage { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 14px; border: 1px solid var(--border); background: radial-gradient(1000px 600px at 80% -10%, #1b2138 0, #0e1324 60%, #0a0f1d 100%); }
+.layer { position: absolute; inset: 0; opacity: 0; transition: opacity 800ms ease-in-out; background-size: 120% 120%; background-position: center; background-repeat: no-repeat; transform: scale(1.06); }
+.layer.active { opacity: 1; animation: kenburns 4s ease-in-out forwards; }
+@keyframes kenburns { 0% { transform: scale(1.06) translate3d(-2%, -2%, 0); } 50% { transform: scale(1.10) translate3d(1%, 0%, 0); } 100% { transform: scale(1.14) translate3d(2%, 2%, 0); } }
+.caption { position: absolute; left: 12px; bottom: 10px; padding: 6px 10px; border-radius: 8px; background: rgba(4, 6, 13, 0.55); border: 1px solid rgba(255,255,255,0.1); color: var(--ink); font-size: 13px; backdrop-filter: blur(6px); }
+.promptCard { position: absolute; inset: 24px; border-radius: 14px; border: 1px solid var(--border); padding: 16px; background: linear-gradient(160deg, rgba(16,21,34,0.8), rgba(11,15,26,0.8)); color: var(--ink); display: flex; flex-direction: column; gap: 8px; }
+.promptTitle { font-weight: 700; opacity: 0.8; font-size: 14px; }
+.promptText { font-size: 13px; line-height: 1.35; color: var(--muted); }
